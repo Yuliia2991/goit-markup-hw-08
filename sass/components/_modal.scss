@@ -1,0 +1,198 @@
+.backdrop {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: opacity 500ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 500ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 1000ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  padding: 40px;
+  width: 528px;
+  min-height: 581px;
+  background-color: var(--second-accent-color);
+  border-radius: 4px;
+
+  .backdrop.is-hidden & {
+    transform: scale(4) rotate(270deg);
+  }
+
+  &:hover {
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+  }
+}
+.modal__button-close {
+  @include centeredFlex();
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
+  width: 30px;
+  height: 30px;
+  background-color: var(--second-accent-color);
+  color: var(--black-color);
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: var(--main-accent-color);
+  }
+}
+.modal__icon-close {
+  fill: currentColor;
+}
+.modal__text {
+  text-align: center;
+  margin-bottom: 12px;
+
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+}
+.modal__form-wrap {
+  margin-bottom: 10px;
+}
+.modal__label {
+  display: block;
+  margin-bottom: 4px;
+
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: var(--text-color);
+}
+.modal__input-wrap {
+  position: relative;
+}
+.modal__input {
+  display: block;
+  width: 100%;
+  height: 40px;
+  padding-left: 43px;
+  padding-right: 15px;
+  background-color: transparent;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+  color: var(--text-color);
+
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:focus {
+    border-color: var(--main-accent-color);
+    outline: none;
+  }
+}
+.modal__input:-webkit-autofill {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: var(--text-color);
+}
+.modal__form-icon {
+  position: absolute;
+  top: 11px;
+  left: 12px;
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  .modal__input:focus + & {
+    fill: var(--main-accent-color);
+  }
+}
+.modal__textarea-wrap {
+  margin-bottom: 20px;
+}
+.modal__textarea {
+  display: block;
+  resize: none;
+  width: 100%;
+  height: 120px;
+  padding: 12px 16px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+  color: var(--text-color);
+
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:focus {
+    border-color: var(--main-accent-color);
+    outline: none;
+  }
+  &::placeholder {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+  }
+}
+.modal__check-wrap {
+  margin-bottom: 30px;
+}
+.modal__check-label {
+  @include centeredFlex();
+  font-weight: 400;
+  line-height: 1.71;
+  color: var(--text-color);
+}
+.modal__check-box {
+  @include centeredFlex();
+  width: 16px;
+  height: 15px;
+  border: 2px solid var(--main-title-color);
+  border-radius: 2px;
+  margin-right: 7px;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  .modal__check-input:checked + .modal__check-label & {
+    background-color: var(--main-accent-color);
+    border: none;
+  }
+  .modal__check-input:focus + .modal__check-label & {
+    border-color: var(--main-accent-color);
+  }
+}
+.modal__check-icon {
+  fill: var(--second-accent-color);
+}
+.modal__check-link {
+  color: var(--main-accent-color);
+}
+.modal__button {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
