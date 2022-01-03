@@ -381,46 +381,33 @@ img {
   border-bottom: 1px solid #ececec;
 }
 
+@media screen and (min-width: 767px) {
+  .header__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+}
+
 @media screen and (max-width: 767px) {
   .header-nav {
     display: none;
   }
 }
 
-.header__container {
-  display: flex;
-  align-items: center;
-}
-
-.navigation {
-  display: flex;
-  align-items: center;
-  padding-top: 16px;
-  padding-bottom: 16px;
-}
-
-@media screen and (min-width: 768px) {
-  .header-nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .navigation__logo {
-    margin-right: 88px;
-  }
+.header-nav__item:not(:last-child) {
+  margin-right: 50px;
 }
 
 @media screen and (min-width: 1200px) {
-  .navigation__logo {
-    margin-right: 93px;
+  .header-nav__item:not(:last-child) {
+    margin-right: 50px;
   }
-}
-
-.header-nav__item:not(:last-child) {
-  margin-right: 50px;
 }
 
 .header-nav__link {
@@ -446,10 +433,6 @@ img {
   border-radius: 2px;
 }
 
-.header__contacts {
-  margin-left: auto;
-}
-
 @media screen and (max-width: 767px) {
   .contacts {
     display: none;
@@ -458,35 +441,26 @@ img {
 
 @media screen and (min-width: 1200px) {
   .contacts {
+    margin-left: auto;
     display: flex;
-    justify-content: center;
     align-items: center;
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .contacts__item {
+@media screen and (min-width: 767px) and (max-width: 1199px) {
+  .contacts__item:not(:last-child) {
     margin-bottom: 10px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .contacts__item:not(:last-child) {
-    margin-right: 50px;
+    margin-right: 30px;
   }
 }
 
 .contacts__link {
   color: var(--text-color);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .contacts__link {
-    justify-content: start;
-  }
 }
 
 .header-nav__link,
@@ -507,29 +481,66 @@ img {
   fill: currentColor;
 }
 
-.mob-menu__close-btn {
-  color: var(--black-color);
-  background-color: transparent;
-  border-style: none;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.mob-menu__close-btn:hover, .mob-menu__close-btn:focus {
+@media screen and (max-width: 767px) {
+  .navigation {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .navigation__logo {
+    margin-right: 88px;
+  }
+}
+
+.header__open-menu-btn {
+  background-color: transparent;
+  border-style: none;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+}
+
+.header__open-menu-btn:hover, .header__open-menu-btn:focus {
   color: var(--main-accent-color);
 }
 
-.mob-menu__icon-close {
+@media screen and (min-width: 767px) {
+  .header__open-menu-btn {
+    display: none;
+  }
+}
+
+.header__open-menu-icon {
   fill: currentColor;
+}
+
+.mob-menu__close-btn {
+  display: block;
+  margin-left: auto;
+  background-color: transparent;
+  border-style: none;
+  padding: 0;
+  width: 40px;
+  height: 40px;
 }
 
 .mob-menu {
   position: fixed;
   top: 0;
+  left: 0;
   width: 100vw;
   height: 100vh;
-  z-index: 333;
+  z-index: 2;
+  padding-top: 16px;
   padding-bottom: 48px;
-  padding-left: 40px;
   background-color: #fff;
 }
 
@@ -546,26 +557,10 @@ img {
   justify-content: space-between;
 }
 
-.header__open-menu-btn {
-  margin-left: auto;
-  padding: 0;
-  background-color: transparent;
-  border: none;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.header__open-menu-btn:hover, .header__open-menu-btn:focus {
-  color: var(--main-accent-color);
-}
-
 @media screen and (min-width: 767px) {
-  .header__open-menu-btn {
+  .mob-menu {
     display: none;
   }
-}
-
-.header__open-menu-btn {
-  fill: currentColor;
 }
 
 .mob-nav {
@@ -763,7 +758,7 @@ img {
   color: var(--text-color);
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
   .section.mobile {
     display: none;
   }
