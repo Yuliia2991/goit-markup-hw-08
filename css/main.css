@@ -589,6 +589,14 @@ img {
   height: 40px;
 }
 
+.mob-menu__close-btn:hover, .mob-menu__close-btn:focus {
+  color: var(--main-accent-color);
+}
+
+.mob-menu__icon-close {
+  fill: currentColor;
+}
+
 .mob-menu {
   position: fixed;
   top: 0;
