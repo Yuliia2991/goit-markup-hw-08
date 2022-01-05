@@ -186,7 +186,7 @@ img {
   transition: transform 1000ms cubic-bezier(0.4, 0, 0.2, 1);
   width: 95%;
   max-height: 97%;
-  padding: 40px;
+  padding: 30px;
   background-color: var(--second-accent-color);
   border-radius: 4px;
 }
