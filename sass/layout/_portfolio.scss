@@ -1,7 +1,6 @@
 .filters {
   display: flex;
   margin-bottom: 40px;
-  margin-right: -8px;
 
   @media screen and (max-width: 767px) {
     flex-wrap: wrap;
@@ -17,8 +16,12 @@
   }
 }
 .filters__item {
-  margin-right: 8px;
-  margin-top: 15px;
+  &:not(:last-child) {
+    margin-right: 8px;
+  }
+  @media screen and (max-width: 767px) {
+    margin-top: 15px;
+  }
 }
 .filters__button {
   min-width: 73px;

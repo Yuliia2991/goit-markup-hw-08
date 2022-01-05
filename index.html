@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="./css/main.min.css">
 </head>
 <body>
-    <!---------------------------------------------------------------------- Шапка сайта ---------------------------------->
+    <!-- ==========================Шапка сайта============================ -->
     <header class="header">
         <div class="header__container container">
             <nav class="navigation">
@@ -71,7 +71,7 @@
                         </button>
                         <ul class="mob-nav">
                             <li class="mob-nav__item">
-                                <a class="mob-nav__link" href="./index.html">Студия</a>
+                                <a class="mob-nav__link mob-nav__link--current" href="./index.html">Студия</a>
                             </li>
                         
                             <li class="mob-nav__item">
@@ -86,7 +86,7 @@
                     <div class="mob-menu__bottom">
                         <ul class="mob-contacts">
                             <li class="mob-contacts__item">
-                                <a class="mob-contacts__link" href="tel:+380961111111">
+                                <a class="mob-contacts__link mob-contacts__link--current" href="tel:+380961111111">
                                     +38 096 111 11 11
                                 </a>
                             </li>
@@ -116,12 +116,12 @@
         </div>
     </header>
     <main>
-        <!---------------------------------------------------------------------- Герой ------------------------------------->
+        <!-- ===================================Герой================================= -->
         <section class="hero">            
             <h1 class="hero__title">ЭФФЕКТИВНЫЕ РЕШЕНИЯ ДЛЯ ВАШЕГО БИЗНЕСА</h1>
             <button class="button" type="button" data-modal-open>Заказать услугу</button>          
         </section>
-        <!--------------------------------------------------------------- Преимущества компании----------------------------->
+        <!-- =========================================Преимущества компании=================== -->
         <section class="section section--no-padding-bottom">
             <div class="container">
                 <h2 class="visually-hidden">Наши преимущества</h2>
@@ -168,7 +168,7 @@
                 </ul>
             </div>
         </section>
-        <!------------------------------------------------------- Чем занимается компания ---------------------------------->
+        <!-- ===========================================Чем занимается компания=========================== -->
         <section class="section mobile">
             <div class="container">
                 <h2 class="section__title">Чем мы занимаемся</h2>
@@ -193,7 +193,7 @@
                 </ul>
             </div>
         </section>
-        <!---------------------------------------------------------- Команда компании -------------------------------------->
+        <!-- ================================================Команда================================ -->
         <section class="section section--grey-bg">
             <div class="container">
                 <h2 class="section__title">Наша команда</h2>
@@ -273,7 +273,7 @@
                             <img src="./images/team/team2-desk.jpg" alt="Фото Ольги Репиной">
                         </picture>
                         <div class="team__content">
-                            <h3 class="team__person ">Ольга Репина</h3>
+                            <h3 class="team__title ">Ольга Репина</h3>
                             <p class="team__text" lang="en">Frontend Developer</p>
                             <ul class="socials">
                                 <li class="socials__item">
@@ -328,7 +328,7 @@
                             <img src="./images/team/team3-desk.jpg" alt="Фото Николая Тарасова">
                         </picture>
                         <div class="team__content">
-                            <h3 class="team__person ">Николай Тарасов</h3>
+                            <h3 class="team__title ">Николай Тарасов</h3>
                             <p class="team__text" lang="en">Marketing</p>
                             <ul class="socials">
                                 <li class="socials__item">
@@ -383,7 +383,7 @@
                                 <img src="./images/team/team4-desk.jpg" alt="Фото Михаила Ермакова">
                             </picture>                        
                         <div class="team__content">
-                            <h3 class="team__person ">Михаил Ермаков</h3>
+                            <h3 class="team__title">Михаил Ермаков</h3>
                             <p class="team__text" lang="en">UI Designer</p>
                             <ul class="socials">
                                 <li class="socials__item">
@@ -423,7 +423,7 @@
                 </ul>
             </div>
         </section>
-
+        <!-- =====================================Постоянные клиенты=============================== -->
         <section class="section">
             <div class="container">
                 <h2 class="section__title">Постоянные клиенты</h2>
@@ -479,7 +479,7 @@
             </div>
         </section>
     </main>
-    <!---------------------------------------------- Футер ------------------------------------------------------->
+   <!-- ===============================================Футер========================================== -->
     <footer class="footer">
         <div class="footer__wrap container">
             <div class="footer__content">
@@ -560,6 +560,7 @@
             </form>            
         </div>
     </footer>
+    <!-- ===========================================Модалка======================================= -->
     <div class="backdrop is-hidden" data-modal>
         <div class="modal">
             <button type="button" class="modal__button-close" data-modal-close>
@@ -651,6 +652,7 @@
                 </form>                        
         </div>
     </div>
+    <!-- =============================================JS============================= -->
     <script src="./js/modal.js"></script>
     <script src="./js/menu.js"></script>
     </body>
