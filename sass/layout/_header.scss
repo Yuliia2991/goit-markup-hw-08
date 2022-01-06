@@ -210,17 +210,24 @@
   }
 }
 .mob-contacts__link--current {
-  font-size: 34px;
+  font-size: 30px;
   line-height: 1.18;
   color: var(--main-accent-color);
+  @media screen and (min-width: 480px) {
+    font-size: 34px;
+    line-height: 1.18;
+  }
 }
 .menu-social {
   display: flex;
-  flex-wrap: wrap;
   font-weight: 500;
-  font-size: 18px;
-  line-height: 1.22;
+  font-size: 14px;
+  line-height: 1.15;
   letter-spacing: 0.02em;
+  @media screen and (min-width: 480px) {
+    font-size: 18px;
+    line-height: 1.22;
+  }
 }
 .menu-social__item:not(:last-child) {
   border-right: 1px solid rgba(33, 33, 33, 0.2);
